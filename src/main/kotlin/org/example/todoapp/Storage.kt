@@ -1,7 +1,8 @@
 package org.example.todoapp
 
 /**
- * Storage class for the app.
+ * Storage class for the app. Based on kotlin_todo's [Storage.kt file](https://github.com/programiz/kotlin-todo/blob/master/src/Storage.kt)
+ * @author Nick Apperley
  */
 class Storage(val dbName: String) {
     var todos = mutableListOf<TodoListItem>()

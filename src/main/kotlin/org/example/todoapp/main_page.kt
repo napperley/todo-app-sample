@@ -3,9 +3,12 @@ package org.example.todoapp
 import org.webscene.client.html.InputType
 import org.webscene.client.html.HtmlCreator as html
 
+// Provides the view for the main page.
+// Author - Nick Apperley
+
 private val sectionFooterData = arrayOf("#/" to "All", "#/active" to "Active", "#/completed" to "Completed")
 
-fun createPageFooter() = html.parentElement("footer") {
+internal fun createPageFooter() = html.parentElement("footer") {
     classes += "info"
     parentHtmlElement("p") {
         parentHtmlElement("span") { +"Source on " }
@@ -57,7 +60,7 @@ private fun createChildSection() = html.parentElement("section") {
     }
 }
 
-fun createParentSection() = html.parentElement("section") {
+internal fun createParentSection() = html.parentElement("section") {
     classes += "todoapp"
     children += createSectionHeader()
     children += createChildSection()
